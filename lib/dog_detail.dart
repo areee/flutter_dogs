@@ -17,6 +17,8 @@ class DogDetail extends StatefulWidget {
 }
 
 class _DogDetailState extends State<DogDetail> {
+  double _sliderVal = 14.0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,9 +49,27 @@ class _DogDetailState extends State<DogDetail> {
                 itemBuilder: (BuildContext context, int index) {
                   final registration = widget.dog.registrationQuantities[index];
                   return Text(
-                      'Year ${registration.year}: ${registration.quantity} dogs');
+                    'Year ${registration.year}: ${registration.quantity} dogs',
+                    style: TextStyle(
+                      fontSize: _sliderVal,
+                    ),
+                  );
                 },
               ),
+            ),
+            Slider(
+              min: 14.0,
+              max: 24.0,
+              divisions: 10,
+              label: 'Font size $_sliderVal',
+              value: _sliderVal,
+              onChanged: (newValue) {
+                setState(() {
+                  _sliderVal = newValue;
+                });
+              },
+              activeColor: Colors.lightGreen,
+              inactiveColor: Colors.black,
             ),
           ],
         ),
