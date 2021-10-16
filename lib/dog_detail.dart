@@ -40,6 +40,17 @@ class _DogDetailState extends State<DogDetail> {
               widget.dog.breedName,
               style: GoogleFonts.montserrat(fontSize: 18),
             ),
+            Expanded(
+              child: ListView.builder(
+                padding: const EdgeInsets.all(7.0),
+                itemCount: widget.dog.registrationQuantities.length,
+                itemBuilder: (BuildContext context, int index) {
+                  final registration = widget.dog.registrationQuantities[index];
+                  return Text(
+                      'Year ${registration.year}: ${registration.quantity} dogs');
+                },
+              ),
+            ),
           ],
         ),
       ),
