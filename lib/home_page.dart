@@ -50,10 +50,10 @@ class _HomePageState extends State<HomePage> {
         padding: const EdgeInsets.all(24.0),
         child: Column(
           children: <Widget>[
-            Image(image: AssetImage(dog.imageUrl)),
+            Image(image: AssetImage(dog.imageUrl!)),
             const SizedBox(height: 21.0),
             Text(
-              dog.breedName,
+              dog.breedName!,
               style: GoogleFonts.andada(
                 fontSize: 20.0,
                 fontWeight: FontWeight.bold,

@@ -23,7 +23,7 @@ class _DogDetailState extends State<DogDetail> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.dog.breedName),
+        title: Text(widget.dog.breedName!),
       ),
       body: SafeArea(
         child: Column(
@@ -32,22 +32,23 @@ class _DogDetailState extends State<DogDetail> {
               height: 300,
               width: double.infinity,
               child: Image(
-                image: AssetImage(widget.dog.imageUrl),
+                image: AssetImage(widget.dog.imageUrl!),
               ),
             ),
             const SizedBox(
               height: 4,
             ),
             Text(
-              widget.dog.breedName,
+              widget.dog.breedName!,
               style: GoogleFonts.montserrat(fontSize: 18),
             ),
             Expanded(
               child: ListView.builder(
                 padding: const EdgeInsets.all(7.0),
-                itemCount: widget.dog.registrationQuantities.length,
+                itemCount: widget.dog.registrationQuantities!.length,
                 itemBuilder: (BuildContext context, int index) {
-                  final registration = widget.dog.registrationQuantities[index];
+                  final registration =
+                      widget.dog.registrationQuantities![index];
                   return Text(
                     'Year ${registration.year}: ${registration.quantity} dogs',
                     style: TextStyle(
