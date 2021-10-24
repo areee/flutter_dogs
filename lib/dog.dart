@@ -19,9 +19,12 @@ class Dog {
   /// More info source (Wikipedia source url)
   final String? moreInfoUrl;
 
-  /// Type of the dog
-  /// Currently defaults to other because Finnish breeds are already added to the sample data
+  /// Type of the dog.
+  /// Currently defaults to purebreds because the author of the app prefers them
   final DogType dogType;
+
+  /// Date when the post was added
+  final DateTime? date;
 
   /// Registration quantities of the dog breed
   final List<RegistrationQuantity>? registrationQuantities;
@@ -33,7 +36,8 @@ class Dog {
     this.imageCopyright,
     this.moreInfo,
     this.moreInfoUrl,
-    this.dogType = DogType.other,
+    this.dogType = DogType.purebred,
+    this.date,
     this.registrationQuantities,
   });
 
@@ -52,7 +56,8 @@ class Dog {
       moreInfo:
           'The Finnish Lapphund (or Finnish Lapponian Dog) is a hardy, easy going, medium-size breed of Spitz type. Traditionally it has been used for herding reindeer. Although it is one of the most popular dog breeds in its native country, Finland, it is not very numerous outside of the Nordic countries.',
       moreInfoUrl: 'https://en.wikipedia.org/wiki/Finnish_Lapphund',
-      dogType: DogType.finnishBreed,
+      dogType: DogType.purebred,
+      date: DateTime(2021, 10, 13),
       registrationQuantities: [
         RegistrationQuantity(
           year: 2020,
@@ -84,7 +89,8 @@ class Dog {
       moreInfo:
           'The Lapponian Herder (Lapinporokoira or Lapp Reindeer Dog or Lapsk Vallhund) is a breed of dog from Finland, one of three Lapphund breeds developed from a type of dog used by the Sami people for herding and guarding their reindeer.',
       moreInfoUrl: 'https://en.wikipedia.org/wiki/Lapponian_Herder',
-      dogType: DogType.finnishBreed,
+      dogType: DogType.purebred,
+      date: DateTime(2021, 10, 14),
       registrationQuantities: [
         RegistrationQuantity(
           year: 2020,
@@ -117,7 +123,8 @@ class Dog {
       moreInfo:
           'The Finnish Spitz (Finnish: suomenpystykorva) is a breed of dog originating in Finland. The breed was originally trained to hunt all types of game from squirrels and other rodents to bears. It is a "bark pointer", indicating the position of game by barking, and drawing the game animal\'s attention to itself, allowing an easier approach for the hunter. Its original game hunting purpose was to point to game that fled into trees, such as grouse, and capercaillies, but it also serves well for hunting elk. Some individuals have even been known to go after a bear. In its native country, the breed is still mostly used as a hunting dog. The breed is friendly and in general loves children, so it is suitable for domestic life. The Finnish Spitz has been the national dog of Finland since 1979.',
       moreInfoUrl: 'https://en.wikipedia.org/wiki/Finnish_Spitz',
-      dogType: DogType.finnishBreed,
+      dogType: DogType.purebred,
+      date: DateTime(2021, 10, 15),
       registrationQuantities: [
         RegistrationQuantity(
           year: 2020,
@@ -149,7 +156,8 @@ class Dog {
       moreInfo:
           'The Finnish Hound (suomenajokoira, Finnish Bracke) is a breed of dog originally bred for hunting hare and fox.',
       moreInfoUrl: 'https://en.wikipedia.org/wiki/Finnish_Hound',
-      dogType: DogType.finnishBreed,
+      dogType: DogType.purebred,
+      date: DateTime(2021, 10, 16),
       registrationQuantities: [
         RegistrationQuantity(
           year: 2020,
@@ -182,7 +190,8 @@ class Dog {
       moreInfo:
           'The Karelian Bear Dog (Karjalankarhukoira) is a Finnish breed of dog. In its home country, it is regarded as a national treasure. Karelian Bear Dogs will hunt a variety of animals. Its quick reflexes and fearless nature have made it very popular for hunting large game including small black bears, moose, and wild boar. It was the breed\'s ability to hunt bears that earned the breed its name. The Karelian Bear Dog is among the top 10 most common dog breeds in Finland.',
       moreInfoUrl: 'https://en.wikipedia.org/wiki/Karelian_Bear_Dog',
-      dogType: DogType.finnishBreed,
+      dogType: DogType.purebred,
+      date: DateTime(2021, 10, 17),
       registrationQuantities: [
         RegistrationQuantity(
           year: 2020,
@@ -219,5 +228,5 @@ class RegistrationQuantity {
   RegistrationQuantity({this.year, this.quantity});
 }
 
-/// Used to specify whether the dog belongs to the Finnish breeds or other
-enum DogType { finnishBreed, other }
+/// Used to specify whether the dog belongs to the purebreds or mixed-breeds
+enum DogType { purebred, mixedBreed }
