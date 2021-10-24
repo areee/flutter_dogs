@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dogs/dog.dart';
 import 'package:flutter_dogs/dog_detail.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key, required this.title}) : super(key: key);
@@ -34,7 +35,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 );
               },
-              child: buildDogCard(Dog.finnishBreeds[index]),
+              child: _buildDogCard(Dog.finnishBreeds[index]),
             );
           },
         ),
@@ -42,7 +43,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Widget buildDogCard(Dog dog) {
+  Widget _buildDogCard(Dog dog) {
     return Card(
       elevation: 4.0,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
@@ -51,7 +52,12 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: <Widget>[
             Image(image: AssetImage(dog.imageUrl!)),
-            const SizedBox(height: 21.0),
+            const SizedBox(height: 10.0),
+            Text(
+              DateFormat('dd.MM.yyyy').format(dog.date!),
+              style: const TextStyle(fontSize: 14.0),
+            ),
+            const SizedBox(height: 5.0),
             Text(
               dog.breedName!,
               style: GoogleFonts.andada(
