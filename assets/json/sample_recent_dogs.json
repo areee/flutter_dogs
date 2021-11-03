@@ -1,0 +1,25 @@
+[
+    {
+        "copyright": "Savuawa Naawa",
+        "date": "2021-11-03",
+        "explanation": "So cute, small Finnish Lapphund puppies! 😍🐶",
+        "text_source": "areee's head",
+        "media_type": "video",
+        "service_version": "v1",
+        "thumbnail_url": "https://i.vimeocdn.com/video/665171433-290384cec79aa8efd8363eb9a2158b94e14407e3b278ba0e1fefebc8df81640a-d?mw=960&mh=540",
+        "title": "Savu’s Puppies 5 weeks",
+        "url": "https://player.vimeo.com/video/241544257?h=dcc00e4ed3&portrait=0&badge=0"
+    },
+    {
+        "copyright": "Elf",
+        "date": "2021-11-02",
+        "explanation": "The Labrador Retriever, often abbreviated to Labrador or \"Lab\", is a breed of retriever gun dog from the United Kingdom that was developed from imported Canadian fishing dogs. The Labrador is one of the most popular dog breeds in a number of countries in the world, particularly in the Western world.",
+        "text_source": "https://en.wikipedia.org/wiki/Labrador_Retriever",
+        "image_source": "https://commons.wikimedia.org/wiki/File:YellowLabradorLooking.jpg",
+        "hdurl": "assets/dog_images/yellowLabradorLooking.jpg",
+        "media_type": "image",
+        "service_version": "v1",
+        "title": "Labrador Retriever",
+        "url": "assets/dog_images/yellowLabradorLooking.jpg"
+    }
+]
